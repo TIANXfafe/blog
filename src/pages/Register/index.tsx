@@ -5,7 +5,7 @@ const Index = () => {
   const [captchaImg, setCaptchaImg] = useState("");
   const handleRegister = async () => {
     console.log("阻止跳转");
-    const res = await captcha.getCaptchaImage();
+    const res = await captcha.getFormulaCaptcha();
     console.log('res', res)
     setCaptchaImg(res.data.imageBase64)
   }
